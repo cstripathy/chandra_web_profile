@@ -1,0 +1,7 @@
+.superpowers/
+docs/
+.claude/
+*.Zone.Identifier
+.DS_Store
+Thumbs.db
+CLAUDE.md
