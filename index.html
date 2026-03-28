@@ -6,7 +6,8 @@
   <meta name="description" content="Chandra Sekhar Tripathy — Principal Technical Architect. GenAI, Agentic AI, Cloud Architecture, SRE. Hyderabad, India.">
   <meta property="og:title" content="Chandra Sekhar Tripathy — Principal Technical Architect">
   <meta property="og:description" content="MCP Pioneer · 18+ Years · GenAI · Agentic AI · Cloud · SRE">
-  <meta property="og:image" content="img/IMG_3667.jpg">
+  <meta property="og:image" content="https://vickytripathy.in/img/IMG_3667.jpg">
+  <meta name="theme-color" content="#0f766e">
   <title>Chandra Sekhar Tripathy — Principal Technical Architect</title>
   <style>
     :root {
@@ -324,7 +325,7 @@
 <body>
 
   <!-- NAV -->
-  <nav>
+  <nav aria-label="Primary navigation">
     <div class="logo">CST</div>
     <ul>
       <li><a href="#about">About</a></li>
@@ -336,12 +337,14 @@
   </nav>
 
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero" id="hero">
     <img
       class="hero-photo"
+      id="hero-photo"
       src="img/IMG_3667.jpg"
       alt="Chandra Sekhar Tripathy"
-      onerror="this.style.display='none'; document.getElementById('initials').style.display='flex';"
+      width="120"
+      height="120"
     >
     <div id="initials" class="hero-initials">CST</div>
     <h1>Chandra Sekhar Tripathy</h1>
@@ -350,13 +353,13 @@
     <p class="hero-location">📍 Hyderabad, India</p>
     <div class="hero-btns">
       <a href="resume/CST_Resume_Agentic_v2.pdf" download class="btn-primary">⬇ Download Resume</a>
-      <a href="https://www.linkedin.com/in/chandra-sekhar-tripathy" target="_blank" rel="noopener" class="btn-secondary">LinkedIn →</a>
+      <a href="https://www.linkedin.com/in/chandra-sekhar-tripathy" target="_blank" rel="noopener noreferrer" class="btn-secondary">LinkedIn →</a>
       <a href="#contact" class="btn-secondary">Get in Touch</a>
     </div>
   </section>
 
   <!-- STATS -->
-  <div class="stats">
+  <div class="stats" role="region" aria-label="Career highlights">
     <div class="stat"><div class="stat-num">18+</div><div class="stat-label">Years Experience</div></div>
     <div class="stat"><div class="stat-num">40%</div><div class="stat-label">Cost Reduction</div></div>
     <div class="stat"><div class="stat-num">60%</div><div class="stat-label">Ops Eliminated</div></div>
@@ -620,7 +623,7 @@
   </div>
 
   <!-- LEADERSHIP -->
-  <section>
+  <section id="leadership">
     <div class="section">
       <p class="section-eyebrow">Beyond the Code</p>
       <h2 class="section-title">Leadership &amp; Community</h2>
@@ -646,21 +649,19 @@
   </section>
 
   <!-- RESUME CTA -->
-  <div style="padding: 0;">
-    <div class="resume-cta">
+  <div class="resume-cta">
       <h2>Let's Work Together</h2>
       <p>Download my resume or connect with me to explore opportunities, consulting, or training engagements</p>
       <div class="resume-btns">
         <a href="resume/CST_Resume_Agentic_v2.pdf" download class="resume-btn">⬇ AI / Agentic Resume</a>
         <a href="resume/Chandra_Sekhar_Tripathy_Resume.pdf" download class="resume-btn-outline">⬇ Standard Resume</a>
-        <a href="https://www.linkedin.com/in/chandra-sekhar-tripathy" target="_blank" rel="noopener" class="resume-btn-outline">LinkedIn Profile</a>
+        <a href="https://www.linkedin.com/in/chandra-sekhar-tripathy" target="_blank" rel="noopener noreferrer" class="resume-btn-outline">LinkedIn Profile</a>
       </div>
-    </div>
   </div>
 
   <!-- CONTACT -->
-  <div class="contact-wrap" id="contact">
-    <div class="contact-inner">
+  <div class="contact-wrap">
+    <div class="contact-inner" id="contact">
       <p class="section-eyebrow" style="margin-bottom:8px;">Reach Out</p>
       <h2 class="section-title">Get In Touch</h2>
       <div class="divider" style="margin: 0 auto 24px;"></div>
@@ -674,12 +675,12 @@
         <div class="contact-card">
           <div class="contact-icon">💼</div>
           <div class="contact-label">LinkedIn</div>
-          <div class="contact-value"><a href="https://www.linkedin.com/in/chandra-sekhar-tripathy" target="_blank" rel="noopener">linkedin.com/in/chandra-sekhar-tripathy</a></div>
+          <div class="contact-value"><a href="https://www.linkedin.com/in/chandra-sekhar-tripathy" target="_blank" rel="noopener noreferrer">linkedin.com/in/chandra-sekhar-tripathy</a></div>
         </div>
         <div class="contact-card">
           <div class="contact-icon">🐙</div>
           <div class="contact-label">GitHub</div>
-          <div class="contact-value"><a href="https://github.com/cstripathy" target="_blank" rel="noopener">github.com/cstripathy</a></div>
+          <div class="contact-value"><a href="https://github.com/cstripathy" target="_blank" rel="noopener noreferrer">github.com/cstripathy</a></div>
         </div>
         <div class="contact-card">
           <div class="contact-icon">📍</div>
@@ -696,7 +697,10 @@
   </footer>
 
   <script>
-    // Smooth scroll handled by html { scroll-behavior: smooth }
+    document.getElementById('hero-photo').addEventListener('error', function() {
+      this.style.display = 'none';
+      document.getElementById('initials').style.display = 'flex';
+    });
   </script>
 </body>
 </html>
