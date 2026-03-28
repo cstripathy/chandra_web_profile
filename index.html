@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Chandra Sekhar Tripathy — Principal Technical Architect. GenAI, Agentic AI, Cloud Architecture, SRE. Hyderabad, India.">
+  <meta property="og:title" content="Chandra Sekhar Tripathy — Principal Technical Architect">
+  <meta property="og:description" content="MCP Pioneer · 18+ Years · GenAI · Agentic AI · Cloud · SRE">
+  <meta property="og:image" content="img/IMG_3667.jpg">
+  <title>Chandra Sekhar Tripathy — Principal Technical Architect</title>
+  <style>
+    :root {
+      --teal:       #0f766e;
+      --teal-dark:  #0e7490;
+      --cyan:       #0891b2;
+      --teal-light: #ccfbf1;
+      --teal-bg:    #f0fdfa;
+      --text:       #1e293b;
+      --text-muted: #475569;
+      --text-faint: #94a3b8;
+      --surface:    #f8fafc;
+      --border:     #e2e8f0;
+      --white:      #ffffff;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: var(--text); background: var(--white); line-height: 1.6; }
+    a { text-decoration: none; }
+    img { max-width: 100%; }
+
+    /* NAV */
+    nav {
+      background: rgba(15,118,110,0.96);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 14px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav .logo { color: var(--white); font-weight: 800; font-size: 18px; letter-spacing: 1px; }
+    nav ul { list-style: none; display: flex; gap: 28px; }
+    nav ul a { color: rgba(255,255,255,0.85); font-size: 14px; font-weight: 500; transition: color 0.2s; }
+    nav ul a:hover { color: var(--white); }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, var(--teal) 0%, var(--cyan) 60%, var(--teal-dark) 100%);
+      padding: 80px 40px 64px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; top: -80px; right: -80px;
+      width: 360px; height: 360px;
+      background: rgba(255,255,255,0.05); border-radius: 50%;
+    }
+    .hero::after {
+      content: '';
+      position: absolute; bottom: -100px; left: -60px;
+      width: 280px; height: 280px;
+      background: rgba(255,255,255,0.04); border-radius: 50%;
+    }
+    .hero-photo {
+      width: 120px; height: 120px;
+      border-radius: 50%;
+      border: 4px solid rgba(255,255,255,0.5);
+      object-fit: cover;
+      margin: 0 auto 20px;
+      display: block;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+      position: relative; z-index: 1;
+    }
+    .hero-initials {
+      width: 120px; height: 120px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.2);
+      border: 4px solid rgba(255,255,255,0.4);
+      margin: 0 auto 20px;
+      display: none;
+      align-items: center; justify-content: center;
+      font-size: 36px; font-weight: 800; color: var(--white);
+      position: relative; z-index: 1;
+    }
+    .hero h1 { color: var(--white); font-size: 40px; font-weight: 800; letter-spacing: -0.5px; position: relative; z-index: 1; }
+    .hero .hero-title { color: rgba(255,255,255,0.92); font-size: 20px; font-weight: 600; margin: 8px 0 4px; position: relative; z-index: 1; }
+    .hero .hero-sub { color: rgba(255,255,255,0.78); font-size: 15px; margin-bottom: 8px; position: relative; z-index: 1; }
+    .hero .hero-location { color: rgba(255,255,255,0.7); font-size: 14px; margin-bottom: 32px; position: relative; z-index: 1; }
+    .hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1; }
+    .btn-primary {
+      background: var(--white); color: var(--teal);
+      padding: 13px 30px; border-radius: 50px;
+      font-weight: 700; font-size: 14px;
+      display: inline-flex; align-items: center; gap: 6px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.25); }
+    .btn-secondary {
+      background: rgba(255,255,255,0.15); color: var(--white);
+      padding: 13px 30px; border-radius: 50px;
+      font-weight: 600; font-size: 14px;
+      border: 1.5px solid rgba(255,255,255,0.4);
+      transition: background 0.15s;
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,0.25); }
+
+    /* STATS */
+    .stats {
+      background: var(--teal-dark);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .stat {
+      padding: 20px 36px;
+      text-align: center;
+      border-right: 1px solid rgba(255,255,255,0.12);
+    }
+    .stat:last-child { border-right: none; }
+    .stat-num { color: var(--white); font-size: 28px; font-weight: 800; line-height: 1; }
+    .stat-label { color: rgba(255,255,255,0.72); font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-top: 4px; }
+
+    /* SECTION COMMON */
+    .section { padding: 64px 40px; max-width: 920px; margin: 0 auto; }
+    .section-eyebrow { font-size: 11px; font-weight: 700; color: var(--teal); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; }
+    .section-title { font-size: 30px; font-weight: 800; color: #0f172a; margin-bottom: 16px; }
+    .divider { width: 48px; height: 4px; background: linear-gradient(90deg, var(--teal), var(--cyan)); border-radius: 2px; margin-bottom: 24px; }
+
+    /* ABOUT */
+    .about-text { font-size: 16px; line-height: 1.85; color: var(--text-muted); }
+    .about-text strong { color: var(--text); }
+    .about-badges { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 24px; }
+    .badge {
+      background: var(--teal-bg);
+      border: 1.5px solid #99f6e4;
+      color: var(--teal);
+      padding: 7px 16px; border-radius: 20px;
+      font-size: 13px; font-weight: 600;
+    }
+
+    /* SKILLS */
+    .bg-surface { background: var(--surface); }
+    .skill-group { margin-bottom: 28px; }
+    .skill-group:last-child { margin-bottom: 0; }
+    .skill-group-title {
+      font-size: 12px; font-weight: 700; color: var(--teal);
+      text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px;
+    }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag {
+      padding: 5px 14px; border-radius: 20px;
+      font-size: 13px; font-weight: 500; line-height: 1;
+    }
+    .tag-hot {
+      background: linear-gradient(90deg, var(--teal), var(--cyan));
+      color: var(--white); font-weight: 700;
+    }
+    .tag-ai    { background: var(--teal-light); color: #065f46; }
+    .tag-cloud { background: #dbeafe; color: #1e40af; }
+    .tag-sec   { background: #fce7f3; color: #9d174d; }
+    .tag-devops{ background: #fef3c7; color: #92400e; }
+    .tag-data  { background: #ede9fe; color: #5b21b6; }
+
+    /* EXPERIENCE */
+    .timeline { position: relative; }
+    .exp-item {
+      border-left: 3px solid var(--teal);
+      padding: 0 0 36px 28px;
+      position: relative;
+    }
+    .exp-item:last-child { padding-bottom: 0; border-left-color: transparent; }
+    .exp-item::before {
+      content: '';
+      position: absolute; left: -8px; top: 4px;
+      width: 13px; height: 13px;
+      border-radius: 50%; background: var(--cyan);
+      border: 2px solid var(--white);
+      box-shadow: 0 0 0 2px var(--cyan);
+    }
+    .exp-company { font-size: 19px; font-weight: 800; color: #0f172a; }
+    .exp-company span { font-size: 13px; color: var(--text-faint); font-weight: 400; }
+    .exp-role { font-size: 15px; font-weight: 600; color: var(--teal); margin: 3px 0; }
+    .exp-period { font-size: 13px; color: var(--text-faint); margin-bottom: 12px; }
+    .exp-bullets { list-style: none; }
+    .exp-bullets li {
+      font-size: 14px; color: var(--text-muted); line-height: 1.65;
+      padding: 3px 0 3px 18px; position: relative;
+    }
+    .exp-bullets li::before { content: '▸'; position: absolute; left: 0; color: var(--teal); }
+
+    /* PROJECTS */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .project-card {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: 14px;
+      padding: 26px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .project-card:hover {
+      border-color: var(--teal);
+      box-shadow: 0 4px 20px rgba(15,118,110,0.12);
+    }
+    .project-icon { font-size: 30px; margin-bottom: 12px; }
+    .project-name { font-size: 16px; font-weight: 700; color: #0f172a; margin-bottom: 8px; }
+    .project-desc { font-size: 13px; color: var(--text-muted); line-height: 1.65; }
+    .project-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 14px; }
+    .project-tag {
+      background: var(--teal-bg); color: var(--teal);
+      padding: 3px 10px; border-radius: 10px;
+      font-size: 11px; font-weight: 600;
+    }
+
+    /* LEADERSHIP */
+    .leadership-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+    }
+    .leadership-card {
+      background: linear-gradient(135deg, var(--teal-bg), #e0f2fe);
+      border-radius: 14px; padding: 24px; text-align: center;
+    }
+    .leadership-icon { font-size: 34px; margin-bottom: 10px; }
+    .leadership-title { font-size: 15px; font-weight: 700; color: #0f172a; margin-bottom: 6px; }
+    .leadership-desc { font-size: 13px; color: var(--text-muted); line-height: 1.55; }
+
+    /* RESUME CTA */
+    .resume-cta {
+      background: linear-gradient(135deg, var(--teal), var(--cyan));
+      border-radius: 18px; padding: 52px 48px;
+      text-align: center; margin: 0 40px 64px;
+    }
+    .resume-cta h2 { color: var(--white); font-size: 30px; font-weight: 800; margin-bottom: 10px; }
+    .resume-cta p { color: rgba(255,255,255,0.85); font-size: 15px; margin-bottom: 30px; }
+    .resume-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .resume-btn {
+      background: var(--white); color: var(--teal);
+      padding: 13px 28px; border-radius: 50px;
+      font-weight: 700; font-size: 14px;
+      transition: transform 0.15s;
+    }
+    .resume-btn:hover { transform: translateY(-2px); }
+    .resume-btn-outline {
+      background: transparent; color: var(--white);
+      padding: 13px 28px; border-radius: 50px;
+      font-weight: 600; font-size: 14px;
+      border: 2px solid rgba(255,255,255,0.45);
+      transition: background 0.15s;
+    }
+    .resume-btn-outline:hover { background: rgba(255,255,255,0.15); }
+
+    /* CONTACT */
+    .contact-wrap { background: var(--surface); padding: 64px 40px; }
+    .contact-inner { max-width: 920px; margin: 0 auto; text-align: center; }
+    .contact-intro { color: var(--text-muted); font-size: 15px; margin-bottom: 32px; }
+    .contact-cards { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+    .contact-card {
+      background: var(--white); border: 1.5px solid var(--border);
+      border-radius: 14px; padding: 22px 30px; min-width: 160px;
+      text-align: center;
+      transition: border-color 0.2s;
+    }
+    .contact-card:hover { border-color: var(--teal); }
+    .contact-card a { color: var(--teal); font-weight: 600; font-size: 13px; }
+    .contact-icon { font-size: 26px; margin-bottom: 8px; }
+    .contact-label { font-size: 10px; color: var(--text-faint); text-transform: uppercase; letter-spacing: 1px; }
+    .contact-value { font-size: 13px; font-weight: 600; color: var(--teal); margin-top: 4px; }
+
+    /* FOOTER */
+    footer {
+      background: #0f172a; color: rgba(255,255,255,0.45);
+      text-align: center; padding: 24px 40px; font-size: 13px;
+    }
+    footer span { color: var(--cyan); }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      nav { padding: 12px 20px; }
+      nav ul { gap: 16px; }
+      nav ul a { font-size: 13px; }
+
+      .hero { padding: 56px 20px 48px; }
+      .hero h1 { font-size: 28px; }
+      .hero .hero-title { font-size: 16px; }
+      .hero-btns { flex-direction: column; align-items: center; }
+      .btn-primary, .btn-secondary { width: 240px; justify-content: center; }
+
+      .stats { flex-direction: row; }
+      .stat { padding: 14px 16px; flex: 1; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.12); }
+
+      .section { padding: 48px 20px; }
+      .section-title { font-size: 24px; }
+
+      .projects-grid { grid-template-columns: 1fr; }
+      .leadership-grid { grid-template-columns: 1fr; gap: 12px; }
+
+      .resume-cta { margin: 0 20px 48px; padding: 36px 24px; }
+      .resume-cta h2 { font-size: 22px; }
+      .resume-btns { flex-direction: column; align-items: center; }
+      .resume-btn, .resume-btn-outline { width: 240px; text-align: center; }
+
+      .contact-wrap { padding: 48px 20px; }
+      .contact-cards { flex-direction: column; align-items: center; }
+      .contact-card { width: 100%; max-width: 320px; }
+    }
+
+    @media (max-width: 480px) {
+      nav ul { display: none; }
+      .stat-num { font-size: 22px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="logo">CST</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img
+      class="hero-photo"
+      src="img/IMG_3667.jpg"
+      alt="Chandra Sekhar Tripathy"
+      onerror="this.style.display='none'; document.getElementById('initials').style.display='flex';"
+    >
+    <div id="initials" class="hero-initials">CST</div>
+    <h1>Chandra Sekhar Tripathy</h1>
+    <p class="hero-title">Principal Technical Architect</p>
+    <p class="hero-sub">GenAI &nbsp;·&nbsp; Agentic AI &nbsp;·&nbsp; Cloud Architecture &nbsp;·&nbsp; SRE</p>
+    <p class="hero-location">📍 Hyderabad, India</p>
+    <div class="hero-btns">
+      <a href="resume/CST_Resume_Agentic_v2.pdf" download class="btn-primary">⬇ Download Resume</a>
+      <a href="https://www.linkedin.com/in/chandra-sekhar-tripathy" target="_blank" rel="noopener" class="btn-secondary">LinkedIn →</a>
+      <a href="#contact" class="btn-secondary">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stat"><div class="stat-num">18+</div><div class="stat-label">Years Experience</div></div>
+    <div class="stat"><div class="stat-num">40%</div><div class="stat-label">Cost Reduction</div></div>
+    <div class="stat"><div class="stat-num">60%</div><div class="stat-label">Ops Eliminated</div></div>
+    <div class="stat"><div class="stat-num">99.9%</div><div class="stat-label">Uptime SLA</div></div>
+    <div class="stat"><div class="stat-num">1M+</div><div class="stat-label">Daily Transactions</div></div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section">
+      <p class="section-eyebrow">Who I Am</p>
+      <h2 class="section-title">About Me</h2>
+      <div class="divider"></div>
+      <p class="about-text">
+        Strategic Principal Architect and SRE with <strong>18+ years</strong> designing enterprise-grade cloud
+        architectures, agentic AI systems, and resilient infrastructure for regulated industries. Early adopter
+        and <strong>production implementer of Model Context Protocol (MCP)</strong> — the universal standard
+        for AI-tool integration now backed by Anthropic, OpenAI, and Google.
+      </p>
+      <p class="about-text" style="margin-top: 16px;">
+        Pioneered <strong>AgentOps practices</strong> including multi-agent observability, reasoning trace
+        capture, guardrail enforcement, and agent drift detection. Technology evangelist who translates
+        complex AI/ML architectures into measurable business outcomes — and actively <strong>trains and leads
+        engineering teams</strong> to adopt agentic workflows, modern AI tooling, and AI-native SDLC processes.
+      </p>
+      <div class="about-badges">
+        <span class="badge">🏆 MCP Pioneer</span>
+        <span class="badge">☁️ AWS Certified</span>
+        <span class="badge">🔒 SOC2 · ISO 27001</span>
+        <span class="badge">🤖 Agentic SDLC</span>
+        <span class="badge">👥 Team Leadership</span>
+        <span class="badge">🎓 AI Trainer</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <div class="bg-surface">
+  <section id="skills">
+    <div class="section">
+      <p class="section-eyebrow">What I Work With</p>
+      <h2 class="section-title">Skills &amp; Technologies</h2>
+      <div class="divider"></div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">🔥 Agentic AI &amp; LLMs — Trending 2026</div>
+        <div class="tags">
+          <span class="tag tag-hot">MCP</span>
+          <span class="tag tag-hot">LangGraph</span>
+          <span class="tag tag-hot">Agentic AI</span>
+          <span class="tag tag-ai">LangChain</span>
+          <span class="tag tag-ai">CrewAI</span>
+          <span class="tag tag-ai">AutoGen</span>
+          <span class="tag tag-ai">LlamaIndex</span>
+          <span class="tag tag-ai">OpenAI Agents SDK</span>
+          <span class="tag tag-ai">FastMCP</span>
+          <span class="tag tag-ai">Agno</span>
+          <span class="tag tag-ai">N8N</span>
+          <span class="tag tag-ai">Langflow</span>
+          <span class="tag tag-ai">LangSmith</span>
+          <span class="tag tag-ai">AgentOps</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">🤖 LLM Platforms &amp; Models</div>
+        <div class="tags">
+          <span class="tag tag-cloud">AWS Bedrock</span>
+          <span class="tag tag-cloud">Anthropic Claude</span>
+          <span class="tag tag-cloud">GPT-4o / o3</span>
+          <span class="tag tag-cloud">Gemini 2.5 Pro</span>
+          <span class="tag tag-cloud">DeepSeek R1</span>
+          <span class="tag tag-cloud">Llama 4</span>
+          <span class="tag tag-cloud">Mistral</span>
+          <span class="tag tag-cloud">Vertex AI</span>
+          <span class="tag tag-cloud">Azure AI Studio</span>
+          <span class="tag tag-cloud">Ollama</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">☁️ Cloud &amp; Architecture</div>
+        <div class="tags">
+          <span class="tag tag-cloud">AWS (ECS / EKS / Lambda)</span>
+          <span class="tag tag-cloud">AWS SageMaker</span>
+          <span class="tag tag-cloud">CloudFormation / CDK</span>
+          <span class="tag tag-cloud">Organizations / Control Tower</span>
+          <span class="tag tag-cloud">Azure AKS</span>
+          <span class="tag tag-cloud">GCP / Vertex AI</span>
+          <span class="tag tag-cloud">Multi-Cloud Architecture</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">🔒 Security &amp; Compliance</div>
+        <div class="tags">
+          <span class="tag tag-sec">SOC2</span>
+          <span class="tag tag-sec">ISO 27001</span>
+          <span class="tag tag-sec">GuardDuty</span>
+          <span class="tag tag-sec">Security Hub</span>
+          <span class="tag tag-sec">WAF</span>
+          <span class="tag tag-sec">KMS / Secrets Manager</span>
+          <span class="tag tag-sec">Snyk / SonarQube</span>
+          <span class="tag tag-sec">OAuth 2.1</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">⚙️ DevOps, SRE &amp; Observability</div>
+        <div class="tags">
+          <span class="tag tag-devops">Docker / Kubernetes</span>
+          <span class="tag tag-devops">Terraform / Ansible</span>
+          <span class="tag tag-devops">GitHub Actions</span>
+          <span class="tag tag-devops">DataDog</span>
+          <span class="tag tag-devops">OpenTelemetry (OTEL)</span>
+          <span class="tag tag-devops">Prometheus / Grafana</span>
+          <span class="tag tag-devops">ELK / Splunk</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <div class="skill-group-title">🗄️ Vector, Data &amp; Programming</div>
+        <div class="tags">
+          <span class="tag tag-data">Pinecone</span>
+          <span class="tag tag-data">FAISS / PgVector</span>
+          <span class="tag tag-data">PostgreSQL / DynamoDB / Redis</span>
+          <span class="tag tag-data">Python</span>
+          <span class="tag tag-data">Node.js</span>
+          <span class="tag tag-data">Go</span>
+          <span class="tag tag-data">RAG Pipelines</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="section">
+      <p class="section-eyebrow">Career Journey</p>
+      <h2 class="section-title">Experience</h2>
+      <div class="divider"></div>
+      <div class="timeline">
+
+        <div class="exp-item">
+          <div class="exp-company">Solar.com <span>(formerly Electrum / Pick My Solar India)</span></div>
+          <div class="exp-role">Principal Technical Architect &amp; SRE</div>
+          <div class="exp-period">Sep 2024 – Present · Hyderabad, India</div>
+          <ul class="exp-bullets">
+            <li>Designed production agentic AI systems with ReAct reasoning loops &amp; multi-step tool orchestration using AWS Bedrock &amp; Claude API — reducing manual operations by 60%</li>
+            <li>Built custom MCP servers enabling LLMs to natively interact with AWS infrastructure and Bitbucket pipelines — one of the earliest enterprise MCP adopters in production</li>
+            <li>Established AgentOps practices: reasoning trace logging, agent session replay, guardrail enforcement, and token-cost dashboards integrated with DataDog</li>
+            <li>Architected 60+ microservices handling 1M+ daily transactions with 99.9% uptime SLA; reduced AWS costs by 40% through FinOps governance</li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-company">ValueMomentum Inc</div>
+          <div class="exp-role">Technical Architect → Senior Tech Lead</div>
+          <div class="exp-period">Nov 2017 – Jul 2023 · Hyderabad, India · Client: TMHCC Insurance (Tokio Marine Holdings)</div>
+          <ul class="exp-bullets">
+            <li>Designed cloud-native architectures for a global insurance carrier — defining technical roadmaps and migration strategies for policy management and claims processing</li>
+            <li>Built and led 12-member engineering team; established DevSecOps culture and architectural governance across the full SDLC</li>
+            <li>Architected SOC2 &amp; ISO 27001 security frameworks — zero critical findings across the engagement</li>
+            <li>Designed multi-region DR strategies achieving RPO &lt; 15 min, RTO &lt; 1 hour for business-critical workloads</li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-company">Earlier Career</div>
+          <div class="exp-role">Senior Software Engineer → Senior Tech Lead</div>
+          <div class="exp-period">2009 – 2017 · Ebutor · Elearnmarkets · Techindyeah · Supreme Paper Mills</div>
+          <ul class="exp-bullets">
+            <li>Progressive career building location-based APIs, IoT backends, e-commerce platforms, and Oracle application systems</li>
+            <li>Developed strong foundations in distributed systems, API design, and engineering leadership</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <div class="bg-surface">
+  <section id="projects">
+    <div class="section">
+      <p class="section-eyebrow">What I've Built</p>
+      <h2 class="section-title">Notable Projects</h2>
+      <div class="divider"></div>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-icon">🔌</div>
+          <div class="project-name">Custom MCP Servers</div>
+          <p class="project-desc">Built enterprise MCP servers enabling LLMs to natively interact with AWS infrastructure and Bitbucket pipelines — before MCP became the industry standard now adopted by all major AI providers.</p>
+          <div class="project-tags">
+            <span class="project-tag">MCP</span>
+            <span class="project-tag">AWS</span>
+            <span class="project-tag">FastMCP</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon">🧠</div>
+          <div class="project-name">Dual-Path RAG Architecture</div>
+          <p class="project-desc">Designed RAG pipeline combining vector similarity search (FAISS/Pinecone) with structured ML inference for solar installation data, integrating live NASA POWER and NREL PVWatts APIs.</p>
+          <div class="project-tags">
+            <span class="project-tag">RAG</span>
+            <span class="project-tag">FAISS</span>
+            <span class="project-tag">Pinecone</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon">🤝</div>
+          <div class="project-name">Multi-Agent Orchestration</div>
+          <p class="project-desc">Evaluated and implemented multi-agent workflows using LangGraph state machines, CrewAI role-based agents, and N8N automation — delivering 60% reduction in manual operations.</p>
+          <div class="project-tags">
+            <span class="project-tag">LangGraph</span>
+            <span class="project-tag">CrewAI</span>
+            <span class="project-tag">N8N</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon">🔄</div>
+          <div class="project-name">Agentic SDLC Process</div>
+          <p class="project-desc">Pioneered an AI-native software development lifecycle — integrating agentic workflows, AI code review, and automated deployment pipelines into the full engineering process.</p>
+          <div class="project-tags">
+            <span class="project-tag">Agentic AI</span>
+            <span class="project-tag">Claude Code</span>
+            <span class="project-tag">GitHub Copilot</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon">📊</div>
+          <div class="project-name">AgentOps Observability Platform</div>
+          <p class="project-desc">Established AgentOps practices including reasoning trace capture, agent session replay, guardrail enforcement, and token-cost dashboards — unified with DataDog for AI + infra observability.</p>
+          <div class="project-tags">
+            <span class="project-tag">AgentOps</span>
+            <span class="project-tag">DataDog</span>
+            <span class="project-tag">OTEL</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon">☁️</div>
+          <div class="project-name">Enterprise Cloud at Scale</div>
+          <p class="project-desc">Architected AWS multi-account strategy managing 60+ microservices, 1M+ daily transactions, 99.9% uptime SLA — with 40% cost reduction via FinOps governance and ECS migrations.</p>
+          <div class="project-tags">
+            <span class="project-tag">AWS</span>
+            <span class="project-tag">FinOps</span>
+            <span class="project-tag">SRE</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  </div>
+
+  <!-- LEADERSHIP -->
+  <section>
+    <div class="section">
+      <p class="section-eyebrow">Beyond the Code</p>
+      <h2 class="section-title">Leadership &amp; Community</h2>
+      <div class="divider"></div>
+      <div class="leadership-grid">
+        <div class="leadership-card">
+          <div class="leadership-icon">👥</div>
+          <div class="leadership-title">Team Leadership</div>
+          <p class="leadership-desc">Built and mentored cross-functional engineering teams; established DevSecOps culture and architectural governance that scaled with 3× business growth</p>
+        </div>
+        <div class="leadership-card">
+          <div class="leadership-icon">🎓</div>
+          <div class="leadership-title">AI Training &amp; Enablement</div>
+          <p class="leadership-desc">Training engineering teams on Agentic AI, LLMs, MCP, and modern cloud tooling — accelerating enterprise AI adoption across organizations</p>
+        </div>
+        <div class="leadership-card">
+          <div class="leadership-icon">🔄</div>
+          <div class="leadership-title">Agentic SDLC Champion</div>
+          <p class="leadership-desc">Pioneering AI-native development processes — integrating agentic workflows into every stage of the software lifecycle from design to deployment</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESUME CTA -->
+  <div style="padding: 0;">
+    <div class="resume-cta">
+      <h2>Let's Work Together</h2>
+      <p>Download my resume or connect with me to explore opportunities, consulting, or training engagements</p>
+      <div class="resume-btns">
+        <a href="resume/CST_Resume_Agentic_v2.pdf" download class="resume-btn">⬇ AI / Agentic Resume</a>
+        <a href="resume/Chandra_Sekhar_Tripathy_Resume.pdf" download class="resume-btn-outline">⬇ Standard Resume</a>
+        <a href="https://www.linkedin.com/in/chandra-sekhar-tripathy" target="_blank" rel="noopener" class="resume-btn-outline">LinkedIn Profile</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="contact-wrap" id="contact">
+    <div class="contact-inner">
+      <p class="section-eyebrow" style="margin-bottom:8px;">Reach Out</p>
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="divider" style="margin: 0 auto 24px;"></div>
+      <p class="contact-intro">Open to collaborations, consulting, speaking opportunities, and team training engagements.</p>
+      <div class="contact-cards">
+        <div class="contact-card">
+          <div class="contact-icon">📧</div>
+          <div class="contact-label">Email</div>
+          <div class="contact-value"><a href="mailto:cst.tripathy@gmail.com">cst.tripathy@gmail.com</a></div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">💼</div>
+          <div class="contact-label">LinkedIn</div>
+          <div class="contact-value"><a href="https://www.linkedin.com/in/chandra-sekhar-tripathy" target="_blank" rel="noopener">linkedin.com/in/chandra-sekhar-tripathy</a></div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">🐙</div>
+          <div class="contact-label">GitHub</div>
+          <div class="contact-value"><a href="https://github.com/cstripathy" target="_blank" rel="noopener">github.com/cstripathy</a></div>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">📍</div>
+          <div class="contact-label">Location</div>
+          <div class="contact-value">Hyderabad, India</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 <span>Chandra Sekhar Tripathy</span> &nbsp;·&nbsp; Principal Technical Architect &nbsp;·&nbsp; Hosted on <span>GitHub Pages</span> &nbsp;·&nbsp; <span>vickytripathy.in</span></p>
+  </footer>
+
+  <script>
+    // Smooth scroll handled by html { scroll-behavior: smooth }
+  </script>
+</body>
+</html>
